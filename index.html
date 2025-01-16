@@ -6,6 +6,39 @@
     <title>Document</title>
 </head>
 <body>
+  <h1>Array Manipulation Example</h1>
+  <p>Open the console to see the results of array manipulations.</p>
+
+  <script>
+    // Create a random array of numbers
+    const numberz = [5, 12, 8, 130, 44, 3, 15, 77];
+
+    // Log the original array
+    console.log("Original Array:", numberz);
+
+    //map
+    const doubled = numberz.map(num => num * 2);
+    console.log("Doubled Array (using map):", doubled);
+
+    //  filter 
+    const greaterThanTen = numberz.filter(num => num > 10);
+    console.log("Filtered Array (greater than 10):", greaterThanTen);
+
+    //  forEach 
+    console.log("Original Array Values (using forEach):");
+    numberz.forEach(num => console.log(num));
+
+    //  : Sum all the numbers using reduce
+    const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    console.log("Sum of Array (using reduce):", sum);
+
+    //  the first number greater than 20 using find
+    const firstGreaterThanTwenty = numbers.find(num => num > 20);
+    console.log("First Number Greater Than 20 (using find):", firstGreaterThanTwenty);
+  </script>
+
+
+<h1>Presentation of study/practice of learning outcome]</h1>
     <h1>Please inspect page for JavaScript examples</h1>
     <h2>JavaScript let</h2>
     <h3>
