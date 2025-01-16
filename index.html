@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please inspect page for JavaScript examples</h1>
+    <h2>JavaScript let</h2>
+    <h3>
+        The let keyword allows you to declare a variable with block scope.</h3>
+     
+        <h2>Redeclaring a Variable Using let</h2>
+
+<p id="demo"></p>
+
+<script>
+let  x = 10;
+// Here x is 10
+
+{  
+  let x = 2;
+  // Here x is 2
+}
+
+// Here x is 10
+document.getElementById("demo").innerHTML = x;
+</script>
+
+
+<h2>JavaScript const</h2>
+<p>The const keyword allows you to declare a constant (a JavaScript variable with a constant value).
+    Constants are similar to let variables, except that the value cannot be changed.</p>
+
+    <h2>Declaring a Variable Using const</h2>
+
+<p id="demo"></p>
+
+<script>
+//var  x = 10;
+// Here x is 10
+{  
+  const x = 2;
+  // Here x is 2
+}
+// Here x is 10
+document.getElementById("demo").innerHTML = x;
+</script>
+
+
+<h2>Arrow Functions</h2>
+<p>Arrow functions allows a short syntax for writing function expressions.
+    You don't need the function keyword, the return keyword, and the curly brackets.</p>
+
+<h2>JavaScript Arrow Functions</h2>
+
+<p>With arrow functions, you don't have to type the function keyword, the return keyword, and the curly brackets.</p>
+
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+
+<p id="demo"></p>
+
+<script>
+const p = (x, y) => x * y;
+document.getElementById("demo").innerHTML = p(5, 5);
+</script>
+
+
+<h2>Object Destructuring</h2>
+<p>Destructuring assignment makes it easy to assign array values and object properties to variables.</p>
+
+<h1>JavaScript Operators</h1>
+<h2>Object Destructuring</h2>
+
+<p id="demo"></p>
+
+<script>
+// Create an Object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+// Destructuring Assignment
+let { firstName, age } = person;
+
+// Display Data
+document.getElementById("demo").innerHTML =
+firstName + " is " + age + " years old.";
+</script>
+
+
+<h2>Array Destructuring</h2>
+<p>Destructuring assignment makes it easy to assign array values and object properties to variables.</p>
+
+<h1>JavaScript Operators</h1>
+<h2>Array Destructuring</h2>
+
+<p id="demo"></p>
+
+<script>
+// Create an Array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// Destructuring
+let [fruit1, fruit2] = fruits;
+
+// Display Primitive Data
+document.getElementById("demo").innerHTML = fruit1 + ", " + fruit2;
+</script>
+
+
+<h2>The Spread (...) Operator</h2>
+<p>The ... operator expands an iterable (like an array) into more elements:</p>
+<h1>JavaScript Operators</h1>
+<h2>The ... Operator</h2>
+
+<p>The "spread" operator spreads elements of iterable objects:</p>
+
+<p id="demo"></p>
+
+<script>
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+document.getElementById("demo").innerHTML = year; 
+</script>
+
+
+
+<h2>The For/Of Loop</h2>
+<p>The JavaScript for/of statement loops through the values of an iterable objects.
+
+    for/of lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more.
+    
+    The for/of loop has the following syntax:</p>
+
+    <h2>JavaScript For Of Loop</h2>
+<p>The for of statement loops through the values of any iterable object:</p>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<p>Looping over a String</p>
+
+<h2>JavaScript For Of Loop</h2>
+
+<p>The for of statement loops through the values of an iterable object.</p>
+
+<p id="demo"></p>
+
+<script>
+let language = "JavaScript";
+
+let pext = "";
+for (let x of language) {
+  pext += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p></p>
+<h1>JavaScript Sets</h1>
+<h2>The add() Method</h2>
+
+<p>The add() method adds values to a set:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create a Set
+const letters = new Set();
+
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+// Display the Size
+document.getElementById("demo").innerHTML = "The set has " + letters.size + " values.";
+</script>
+
+
+<h2>JavaScript Classes</h2>
+<p>JavaScript Classes are templates for JavaScript Objects.
+
+    Use the keyword class to create a class.
+    
+    Always add a method named constructor():</p>
+
+
+    <h3>Syntax</h3>
+    <p>class ClassName {
+        constructor() { ... }
+      }</p>
+
+      <h3>Example</h3>
+      <p>class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+      }</p>
+
+
+<h2>Using a Class</h2>
+<p>When you have a class, you can use the class to create objects:</p>
+
+<h1>JavaScript Classes</h1>
+<p>Creating two car objects from a car class:</p>
+
+<p id="demo"></p>
+
+<script>
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2019);
+
+document.getElementById("demo").innerHTML =
+myCar1.name + " " + myCar2.name;
+</script>
+<p></p>
+
+
+<h2>JavaScript Promises</h2>
+<p>A Promise is a JavaScript object that links "Producing Code" and "Consuming Code".
+
+    "Producing Code" can take some time and "Consuming Code" must wait for the result.</p>
+
+    <h3>Promise Syntax</h3>
+    <p>const myPromise = new Promise(function(myResolve, myReject) {
+        // "Producing Code" (May take some time)
+        
+          myResolve(); // when successful
+          myReject();  // when error
+        });
+        
+        // "Consuming Code" (Must wait for a fulfilled Promise).
+        myPromise.then(
+          function(value) { /* code if successful */ },
+          function(error) { /* code if some error */ }
+        );</p>
+
+        <h4>Example</h4>
+        <h1>JavaScript Promise Object</h1>
+<h2>The then() Method</h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<h1 id="demo"></h1>
+
+<script>
+const myPromise = new Promise(function(myResolve, myReject) {
+  setTimeout(function(){ myResolve("I love You !!"); }, 3000);
+});
+
+myPromise.then(function(value) {
+  document.getElementById("demo").innerHTML = value;
+});
+</script>
+
+<h2>The Symbol Type</h2>
+<p>A JavaScript Symbol is a primitive data type just like Number, String, or Boolean.
+
+    It represents a unique "hidden" identifier that no other code can accidentally access.
+    
+    For instance, if different coders want to add a person.id property to a person object belonging to a third-party code, they could mix each others values.
+    
+    Using Symbol() to create a unique identifiers, solves this problem:</p>
+
+    <h3>Example</h3>
+    <h2>Using JavaScript Symbol()</h2>
+
+<p id="demo"></p>
+
+<script>
+const perso = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+let id = Symbol('id');
+perso[id] = 140353;
+
+document.getElementById("demo").innerHTML = perso[id] + " " + perso.id;
+</script>
+
+
+<h2>Default Parameter Values</h2>
+<p><h1>JavaScript Functions</h1>
+    <h2>Default Parameter Values</h2>
+    <p>If y is not passed or undefined, then y = 10:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction(x, y = 10) {
+      return x + y;
+    }
+    document.getElementById("demo").innerHTML = myFunction(5);
+    </script></p>
+
+
+<h2>Function Rest Parameter</h2>
+<p></p>
+<h1>JavaScript Functions</h1>
+<h2>The Rest Parameter</h2>
+
+<p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
+
+<p id="demo"></p>
+
+<script>
+function sum(...args) {
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+
+let y = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+document.getElementById("demo").innerHTML = x;
+</script>
+
+
+
+<h2>String.includes()</h2>
+<p>The includes() method returns true if a string contains a specified value, otherwise false:</p>
+
+<h3>Example</h3>
+<p>let text = "Hello world, welcome to the universe.";
+    text.includes("world")    // Returns true</p>
+
+
+<h2>String.startsWith()</h2>
+<p>The startsWith() method returns true if a string begins with a specified value, otherwise false:</p>
+
+<h3>Example</h3>
+
+<p>let text = "Hello world, welcome to the universe.";
+
+    text.startsWith("Hello")   // Returns true</p>
+
+<h2>String.endsWith()</h2>
+<p>The endsWith() method returns true if a string ends with a specified value, otherwise false:</p>
+
+<h3>Example</h3>
+<p>var text = "John Doe";
+    text.endsWith("Doe")    // Returns true</p>
+
+
+<h2>Array entries()</h2>
+<p>Example
+    Create an Array Iterator, and then iterate over the key/value pairs:</p>
+    <p>const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        const f = fruits.entries();
+        
+        for (let x of f) {
+          document.getElementById("demo").innerHTML += x;
+        }</p>
+  
+
+
+<h2>Array.from()</h2>
+<p>The Array.from() method returns an Array object from any object with a length property or any iterable object.</p>
+<p><h1>JavaScript Arrays</h1>
+    <h2>The from() Method</h2>
+    
+    <p>Return an array object from any object with a length property or any iterable object.</p>
+    
+    <p id="demo"></p>
+     in Internet Explorer.</p>
+    
+    <script>
+    const myArr = Array.from("ABCDEFG");
+    document.getElementById("demo").innerHTML = myArr;
+    </script>
+    
+    <p>The Array.from() method is not supported</p>
+
+
+<h2>Array keys()</h2>
+<p>The keys() method returns an Array Iterator object with the keys of an array.</p>
+<h3>const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    const keys = fruits.keys();
+    
+    let text = "";
+    for (let x of keys) {
+      text += x + "<br>";
+    }
+    </h3>
+
+
+<h2>Array find()</h2>
+<p>The find() method returns the value of the first array element that passes a test function.
+
+    This example finds (returns the value of ) the first element that is larger than 18:</p>
+
+    <p>const numbers = [4, 9, 16, 25, 29];
+        let first = numbers.find(myFunction);
+        
+        function myFunction(value, index, array) {
+          return value > 18;
+        }</p>
+
+
+<h2>Array findIndex()</h2>
+<p>The findIndex() method returns the index of the first array element that passes a test function.
+
+    This example finds the index of the first element that is larger than 18:</p>
+
+    <p><h1>JavaScript Arrays</h1>
+        <h2>The findIndex() Method</h2>
+        
+        <p id="demo"></p>
+        
+        <script>
+        const numbers = [4, 9, 16, 25, 29];
+        
+        document.getElementById("demo").innerHTML = "First number over 18 has index " + numbers.findIndex(myFunction);
+        
+        function myFunction(value, index, array) {
+          return value > 18;
+        }
+        </script></p>
+
+
+<h2>New Math Methods</h2>
+<p>ES6 added the following methods to the Math object:
+
+    Math.trunc()
+    Math.sign()
+    Math.cbrt()
+    Math.log2()
+    Math.log10()</p>
+
+
+<h2>The Math.trunc() Method</h2>
+<p>Math.trunc(x) returns the integer part of x:</p>
+<h3>Example</h3>
+<p>Math.trunc(4.9);    // returns 4
+    Math.trunc(4.7);    // returns 4
+    Math.trunc(4.4);    // returns 4
+    Math.trunc(4.2);    // returns 4
+    Math.trunc(-4.2);    // returns -4</p>
+
+
+<h2>The Math.sign() Method</h2>
+<p>Math.sign(x) returns if x is negative, null or positive:</p>
+<h3>Example</h3>
+<p>Math.sign(-4);    // returns -1
+    Math.sign(0);    // returns 0
+    Math.sign(4);    // returns 1</p>
+
+
+<h2>The Math.cbrt() Method</h2>
+<p>Math.cbrt(x) returns the cube root of x:</p>
+<h3>Example</h3>
+<p>Math.cbrt(8);    // returns 2
+    Math.cbrt(64);    // returns 4
+    Math.cbrt(125);    // returns 5</p>
+
+    <h2>The Math.log2() Method</h2>
+    <p>Math.log2(x) returns the base 2 logarithm of x:</p>
+    <p>Math.log2(2);    // returns 1</p>
+  
+
+    <h2>The Math.log10() Method</h2>
+    <p>Math.log10(x) returns the base 10 logarithm of x:</p>
+    <p>Math.log10(10);    // returns 1</p>
+  
+
+    <h2>New Number Properties</h2>
+    <p>ES6 added the following properties to the Number object:
+
+        EPSILON
+        MIN_SAFE_INTEGER
+        MAX_SAFE_INTEGER</p>
+  
+
+    <h2>EPSILON Example</h2>
+    <p>let x = Number.EPSILON;
+    </p>
+  
+
+    <h2>MIN_SAFE_INTEGER Example</h2>
+    <p>let x = Number.MIN_SAFE_INTEGER;</p>
+  
+
+    <h2>MAX_SAFE_INTEGER Example</h2>
+    <p>let x = Number.MAX_SAFE_INTEGER;</p>
+  
+
+    <h2>The Number.isInteger() Method</h2>
+    <p>The Number.isInteger() method returns true if the argument is an integer.</p>
+
+    <p>Number.isInteger(10);        // returns true
+        Number.isInteger(10.5);      // returns false</p>
+  
+
+    <h2>The Number.isSafeInteger() Method</h2>
+    <p>A safe integer is an integer that can be exactly represented as a double precision number.
+
+        The Number.isSafeInteger() method returns true if the argument is a safe integer.</p>
+
+        <h3>Example</h3>
+        <p>Number.isSafeInteger(10);    // returns true
+            Number.isSafeInteger(12345678901234567890);  // returns false</p>
+  
+
+    <h2>New Global Methods</h2>
+    <p>ES6 added 2 new global number methods:
+
+        isFinite()
+        isNaN()</p>
+  
+
+    <h2>The isFinite() Method</h2>
+    <p>The global isFinite() method returns false if the argument is Infinity or NaN.
+
+        Otherwise it returns true:</p>
+
+        <h3>Example</h3>
+        <p>isFinite(10/0);       // returns false
+            isFinite(10/1);       // returns true</p>
+  
+
+    <h2>The isNaN() Method</h2>
+    <p>The global isNaN() method returns true if the argument is NaN. Otherwise it returns false:</p>
+    <h3>Example</h3>
+    <p>isNaN("Hello");       // returns true</p>
+  
+
+    <h2>Modules</h2>
+    <p>Modules are imported in two different ways:</p>
+    <h3>Import from named exports</h3>
+    <p>import { name, age } from "./person.js";</p>
+  
+
+    <h2>Import from default exports</h2>
+    <p>Import a default export from the file message.js:</p>
+    <p>import message from "./message.js";</p>
+  
+</body>
+</html>
